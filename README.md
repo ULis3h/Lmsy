@@ -1,13 +1,31 @@
-# Lmsy
-Let me see you, A vulnerability detection tool based on vector approximate query.
+# VulnSimilarityDetector
 
-### 目标定义
-输入：目标网站的URL。  
-输出：预测的潜在漏洞列表及其详细信息。  
-### 功能模块
-网站分析模块：收集并分析目标网站的信息。  
-特征提取模块：提取网站特征并转化为向量。  
-向量存储模块：存储已知漏洞网站的向量及其漏洞信息。  
-相似度搜索模块：在向量数据库中搜索相似网站。  
-漏洞预测模块：基于相似网站的漏洞信息，预测目标网站可能存在的漏洞。  
-漏洞验证模块：对预测的漏洞进行实际验证。  
+A vulnerability detection tool based on website similarity vectors.
+
+## Features
+
+- Website analysis and vector generation
+- Vector similarity search against known vulnerable websites
+- Automatic vulnerability detection based on similarity matching
+- Vector database storage for known vulnerable websites
+
+## Requirements
+
+- Python 3.8+
+- Required packages listed in requirements.txt
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+```python
+from vuln_detector import VulnDetector
+
+detector = VulnDetector()
+results = detector.analyze_url("https://example.com")
+print(results.potential_vulnerabilities)
+```
