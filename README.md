@@ -18,6 +18,7 @@ A vulnerability detection tool based on website similarity vectors.
 
 ```bash
 pip install -r requirements.txt
+pip install requests dnspython beautifulsoup4
 ```
 
 ## Usage
